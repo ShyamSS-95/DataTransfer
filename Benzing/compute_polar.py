@@ -64,7 +64,7 @@ state.find_files(config)
 angles = np.linspace(-25.,0.,51)
 
 # mach numbers to run
-mach = np.linspace(0.1,0.1,1)
+mach = np.linspace(0.116,0.116,1)
 
 # start results data
 results = SU2.util.bunch()
