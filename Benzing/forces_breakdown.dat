@@ -1,0 +1,108 @@
+
+-------------------------------------------------------------------------
+|    ___ _   _ ___                                                      |
+|   / __| | | |_  )   Release 4.3.0  "Cardinal"                         |
+|   \__ \ |_| |/ /                                                      |
+|   |___/\___//___|   Suite (Computational Fluid Dynamics Code)         |
+|                                                                       |
+-------------------------------------------------------------------------
+| SU2 Lead Dev.: Dr. Francisco Palacios, Francisco.D.Palacios@boeing.com|
+|                Dr. Thomas D. Economon, economon@stanford.edu          |
+-------------------------------------------------------------------------
+| SU2 Developers:                                                       |
+| - Prof. Juan J. Alonso's group at Stanford University.                |
+| - Prof. Piero Colonna's group at Delft University of Technology.      |
+| - Prof. Nicolas R. Gauger's group at Kaiserslautern U. of Technology. |
+| - Prof. Alberto Guardone's group at Polytechnic University of Milan.  |
+| - Prof. Rafael Palacios' group at Imperial College London.            |
+| - Prof. Edwin van der Weide's group at the University of Twente.      |
+| - Prof. Vincent Terrapon's group at the University of Liege.          |
+-------------------------------------------------------------------------
+| Copyright (C) 2012-2016 SU2, the open-source CFD code.                |
+|                                                                       |
+| SU2 is free software; you can redistribute it and/or                  |
+| modify it under the terms of the GNU Lesser General Public            |
+| License as published by the Free Software Foundation; either          |
+| version 2.1 of the License, or (at your option) any later version.    |
+|                                                                       |
+| SU2 is distributed in the hope that it will be useful,                |
+| but WITHOUT ANY WARRANTY; without even the implied warranty of        |
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+| Lesser General Public License for more details.                       |
+|                                                                       |
+| You should have received a copy of the GNU Lesser General Public      |
+| License along with SU2. If not, see <http://www.gnu.org/licenses/>.   |
+-------------------------------------------------------------------------
+
+
+Problem definition:
+
+Viscous flow: Computing pressure using the ideal gas law
+based on the free-stream temperature and a density computed
+from the Reynolds number.
+Force coefficients computed using free-stream values.
+-- Input conditions:
+Fluid Model: STANDARD_AIR 
+Specific gas constant: 287.058 N.m/kg.K.
+Specific gas constant (non-dim): 1
+Specific Heat Ratio: 1.4000 
+Viscosity Model: SUTHERLAND 
+Ref. Laminar Viscosity: 1.716e-05 N.s/m^2.
+Ref. Temperature: 273.15 K.
+Sutherland Constant: 110.4 K.
+Laminar Viscosity (non-dim): 5.16571e-08
+Ref. Temperature (non-dim): 0.9105
+Sutherland constant (non-dim): 0.368
+Conductivity Model: CONSTANT_PRANDTL  
+Prandtl: 0.72
+Free-stream static pressure: 97483.8 Pa.
+Free-stream total pressure: 98405.1 Pa.
+Free-stream temperature: 300 K.
+Free-stream density: 1.13199 kg/m^3.
+Free-stream velocity: (36.5042, -17.0222) m/s. Magnitude: 40.278 m/s.
+Free-stream total energy per unit mass: 216105 m^2/s^2.
+Free-stream viscosity: 1.84592e-05 N.s/m^2.
+Free-stream turb. kinetic energy per unit mass: 6.08368 m^2/s^2.
+Free-stream specific dissipation: 37307.5 1/s.
+-- Reference values:
+Reference specific gas constant: 287.058 N.m/kg.K.
+Reference pressure: 97483.8 Pa.
+Reference temperature: 300 K.
+Reference density: 1.13199 kg/m^3.
+Reference velocity: 293.458 m/s.
+Reference energy per unit mass: 86117.4 m^2/s^2.
+Reference viscosity: 332.19 N.s/m^2.
+Reference conductivity: 95357.9 W/m^2.K.
+-- Resulting non-dimensional state:
+Mach number (non-dim): 0.116
+Reynolds number (non-dim): 2.47e+06. Re length: 1 m.
+Specific gas constant (non-dim): 1
+Free-stream temperature (non-dim): 1
+Free-stream pressure (non-dim): 1
+Free-stream density (non-dim): 1
+Free-stream velocity (non-dim): (0.124394, -0.0580056). Magnitude: 0.137253
+Free-stream total energy per unit mass (non-dim): 2.50942
+Free-stream viscosity (non-dim): 5.5568e-08
+Free-stream turb. kinetic energy (non-dim): 7.0644e-05
+Free-stream specific dissipation (non-dim): 127.131
+
+
+Forces breakdown:
+
+Total CL:        -1.5149 | Pressure Component (   99%):     -1.5149 | Friction Component (    0%): -5.2329e-06
+Total CD:       0.432046 | Pressure Component (   99%):     0.43202 | Friction Component (    0%): 2.59487e-05
+Total CL/CD:    -3.50634 | Pressure Component (  100%):    -3.50654 | Friction Component (    0%): 0.000198491
+Total CMz:     -0.220735 | Pressure Component (  100%):    -0.22074 | Friction Component (    0%): 5.01536e-06
+Total CFx:     -0.248658 | Pressure Component (  100%):    -0.24868 | Friction Component (    0%):  2.1306e-05
+Total CFy:      -1.55556 | Pressure Component (   99%):    -1.55554 | Friction Component (    0%): -1.5709e-05
+
+
+Surface name: airfoil
+
+Total CL    (   99%):     -1.5149 | Pressure Component (   99%):     -1.5149 | Friction Component (    0%): -5.2329e-06
+Total CD    (   99%):    0.432046 | Pressure Component (   99%):     0.43202 | Friction Component (    0%): 2.59487e-05
+Total CL/CD (  100%):    -3.50634 | Pressure Component (  100%):    -3.50654 | Friction Component (    0%): 0.000198491
+Total CMz   (  100%):   -0.220735 | Pressure Component (  100%):    -0.22074 | Friction Component (    0%): 5.01536e-06
+Total CFx   (  100%):   -0.248658 | Pressure Component (  100%):    -0.24868 | Friction Component (    0%):  2.1306e-05
+Total CFy   (  100%):    -1.55556 | Pressure Component (   99%):    -1.55554 | Friction Component (    0%): -1.5709e-05
+
